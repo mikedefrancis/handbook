@@ -1,0 +1,11 @@
+Use this syntax for printing variables inside of makefiles
+ 
+$(info $$TYPE_SUFFIX is [${TYPE_SUFFIX}])
+ 
+Yields in build output:
+$TYPE_SUFFIX is [64]
+ 
+So more generically
+ 
+$(info $$<your text to print> [${your variable name}])
+In order to print “your text to print <value of variable with supplied name>” in build output!
