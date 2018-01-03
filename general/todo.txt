@@ -1,0 +1,5 @@
+do lena tuts
+do ctf stuff
+learn exploitation techniques for exploiting specific types of vulnerabilities
+learn ARM architecture and how stack/heap are used
+put some of my standard IDApython on github

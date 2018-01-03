@@ -1,0 +1,25 @@
+THINGS TO LEARN (programming)
+c/c++ programming <- DONE (capstone is dimmer game and SQL interface)
+linux, vim, standard devtools for c/c++ <- DONE (capstone is cavim, using make with sel4, etc.)
+embedded/real-time programming (rtos) <- DONE (capstone is agility RTOS)
+networked embedded/real-time programming <- in progress
+driver programming/software <- in progress
+linux kernel programming/driver tweaks
+linux software packages and apis
+linux cloud software
+develop apps that run on top of linux cloud application software
+create my own linux cloud application software
+make some android apps <- in progress (leveraging previous java application work)
+
+THINGS TO LEARN (security)
+standard failures in c/c++ programs <- DONE
+reverse-engineering c/c++ programs using IDA Pro and other tools <- DONE
+embedded system reverse-engineering <- DONE
+reverse-engineering of RTOS components <- DONE
+fuzzing of network interfaces <- DONE
+fuzzing of apis <- in progress
+reverse-engineering of network drivers and networked applications <- in progress
+reverse-engineering of linux kernel and drivers (including network drivers)
+reverse-engineering of linux apis and applications
+reverse-engineering of cloud software hosted on linux
+etc.
