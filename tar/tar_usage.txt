@@ -1,0 +1,7 @@
+simple tar usage
+
+# create a tar file from directory to tar file with filename
+tar -cvf (filename.tar) directory_to_tar
+
+# uncompress a tar file to a folder with filename in current dir
+tar -xvf (filename.tar) 
