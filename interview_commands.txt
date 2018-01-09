@@ -1,0 +1,128 @@
+# how to determine kernel version
+uname -a
+
+# how to determine ip address
+# 2 options
+ifconfig
+ip addr show [device name]
+
+# how to determine free space on hard disk
+df -ah
+free #this also works but df is better
+
+# how do you manage linux services
+# how do you know if a service is running
+#older system..
+service [servicename] status
+#newer system
+systemctl status [servicname]
+
+# how to determine the total size of contents of a directory
+du -sh [directory name]
+
+# how would you check for open ports
+sudo netstat
+sudo netstat -tulpn
+
+# how to determine processor usage of a given program
+ps aux | grep nginx
+top
+htop
+
+# how would you mount a new volume or usb drive or sdcard or hard drive or something like that
+ls /mnt
+mount /dev/sda2 /mnt mounts /dev/sda2 to /mnt # mounts whatever is at sda2 to /mnt
+mount #shows all mounted things
+
+# determine what is mounted at boot
+less /etc/fstab
+
+# how do you look stuff up how to use a program
+manpages!!
+man [program name]
+
+# how do you look up something that is not in the manpage
+google
+stackoverflow
+etc.
+
+#view environment variables
+echo $[environment variable name]
+examle
+echo $SHELL # shows which shell is installed (zsh, bash, etc.)
+
+# what is a daemon
+a daemon is a program that runs in the background without any user control
+the name of a daemon usually ends in 'd'
+daemons are usually started when the operating system starts up
+
+# how do you change the size of a mounted lvm (logical volume) partition
+umount /dev/hda2 /dir1
+resiz32fs /dev/mapper/myvg-mylv 10G
+lvreduce -L 10G /dev/mapper/myvg-mylv
+
+# what is swap space
+swap space is for low-end machines when we do not have enough RAM available
+it is used to store the contents of running programs when there is not enough RAM
+run fdisk to see the swap space
+
+# permissions
+chmod # change read/write/execute permissions (chmod g+wx,o-wx,u=rw filename)
+chown # change user ownership (chown username filename)
+chgrp # change group permissions
+format
+drwxrwxrwx
+d for directory
+first set of rwx read/write/execute bits for user
+second set of rwx read/write/execute bits for group
+first set of rwx read/write/execute bits for root
+
+# what is the maximum length of a filename
+255 character maximum
+maximum path of 4069 characters
+
+# what is the difference between symbolic links and hard links
+symbilic links can be for files or directories and can span across partitions
+hard links can only be use for files and must be within the same partition
+
+# how to run a process in higher priority
+nice
+
+# what are shadow passowrds? how are they enabled?
+shadow passwords are given for 'better' system security
+every users password is stored in /etc/passwd
+all of these passwords are stored in an encrypted form
+passwords in the original file will be replaced with 'x'
+/etc/passwd
+/etc/users
+/etc/shadow #has information about passwords
+
+# how to create a file only if that file does not exist
+touch filename # this changes the timestamp that shows when the file was last accessed
+
+# /usr/ #stands for universal system resources IT IS NOT THE USER FOLDER
+# mainly everyone works in the home folder
+# /var/ #stores a lot of temporary files
+# /media/ #stores mounted drives
+# /bin/ # where your base operating system commands are.. part of the operating system
+# /bin/ # may also contain links to other commands that are installed later (dont come with os)
+# /bin/ # in unix the /bin/ ONLY contains base programs
+# a lot of the /bin/ programs dont come from LINUX but from GNU for instance but they are in /bin/
+# /dev/ # contains all of the devices like the harddrives (NOT THE MOUNTED FILESYSTEMS ON THEM)
+# /lib/ # contains system libraries
+# /opt/ # contains OPTIONAL software
+# /etc/ # linux is a dirty pile of everything you have ever installed
+##### contains system configuration files and also configuration files for most of the other programs that you have installed on your system
+
+#  /proc/ # there is one directory in here for each process that is running
+###### proc is basically a virtual filesystem that the system uses to manage running things
+# /root/ contains nothing unless the root user is doing things
+# /sbin/ contains some userful programs (secure bin?)
+# most files and programs on a system are in /usr/bin
+# all of your system logs are in /var/logs/
+
+# whta is LILO / GRUB?
+# it is a bootloader
+
+
+
